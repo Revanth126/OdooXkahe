@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Craft Your Next Journey</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/create-trip.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <!-- Header Navigation -->
+    <header class="main-header">
+      <div class="header-content">
+        <a href="dashboard.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span class="sans">Cancel</span>
+        </a>
+        <div class="logo serif">Traveloop</div>
+        <div class="header-actions">
+          <button class="btn btn--primary" id="save-trip-btn">Create Journey</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="create-container">
+      <!-- Left Column: Form -->
+      <section class="form-section">
+        <div class="section-intro">
+          <h1 class="serif section-title">Where to <em>next?</em></h1>
+          <p class="sans section-subtitle">Define the details of your upcoming adventure.</p>
+        </div>
+
+        <form id="create-trip-form">
+          <!-- Trip Name -->
+          <div class="input-group">
+            <label class="sans label" for="trip-name">Trip Name</label>
+            <input type="text" id="trip-name" class="trip-input serif" placeholder="The Amalfi Chapter" required>
+          </div>
+
+          <!-- Date Range -->
+          <div class="row">
+            <div class="input-group">
+              <label class="sans label" for="start-date">Departing</label>
+              <input type="date" id="start-date" class="trip-input sans" required>
+            </div>
+            <div class="input-group">
+              <label class="sans label" for="end-date">Returning</label>
+              <input type="date" id="end-date" class="trip-input sans" required>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="input-group">
+            <label class="sans label" for="trip-desc">Notes & Vision</label>
+            <textarea id="trip-desc" class="trip-input sans" rows="4" placeholder="A slow exploration of coastal villages, lemon groves, and sunset dinners..."></textarea>
+          </div>
+
+          <!-- Invite Collaborators -->
+          <div class="input-group">
+            <label class="sans label">Travel Companions</label>
+            <div class="collaborator-input">
+              <div class="avatar-stack" id="collaborator-stack">
+                <div class="avatar-circle user-avatar">SK</div>
+                <button type="button" class="add-avatar-btn" id="add-collaborator">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="input-hint sans">Invite others to plan with you.</p>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Right Column: Visual Inspiration & Themes -->
+      <aside class="visual-section">
+        <div class="inspiration-card">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80" alt="Italy Coastal" class="hero-image">
+          <div class="vibe-selector">
+            <h3 class="serif vibe-title">Choose your vibe</h3>
+            <div class="vibe-grid">
+              <div class="vibe-item active" data-vibe="coastal">
+                <div class="vibe-thumb" style="background-image: url('https://images.unsplash.com/photo-1520116468816-95b69f847357?w=150&q=80')"></div>
+                <span class="sans">Coastal Drift</span>
+              </div>
+              <div class="vibe-item" data-vibe="alpine">
+                <div class="vibe-thumb" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=150&q=80')"></div>
+                <span class="sans">Alpine Calm</span>
+              </div>
+              <div class="vibe-item" data-vibe="urban">
+                <div class="vibe-thumb" style="background-image: url('https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=150&q=80')"></div>
+                <span class="sans">Urban Chic</span>
+              </div>
+              <div class="vibe-item" data-vibe="desert">
+                <div class="vibe-thumb" style="background-image: url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&q=80')"></div>
+                <span class="sans">Desert Oasis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="scripts/create-trip.js"></script>
+</body>
+</html>

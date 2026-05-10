@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Curated Activities</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/activities.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <a href="discovery.html" class="back-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sans">Back to Explore</span>
+        </a>
+        <div class="search-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search activities in Paris..." class="sans">
+        </div>
+      </header>
+
+      <section class="city-hero">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <span class="badge sans">Activity Search</span>
+          <h1 class="serif">Paris, <em>France</em></h1>
+          <p class="sans">Discover 124 curated experiences in the City of Light.</p>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <div class="filter-bar">
+          <h2 class="serif">Curated for you</h2>
+          <div class="filters">
+            <button class="filter-pill active">All</button>
+            <button class="filter-pill">Culinary</button>
+            <button class="filter-pill">Art & Culture</button>
+            <button class="filter-pill">Outdoor</button>
+            <button class="filter-pill">Workshops</button>
+          </div>
+        </div>
+
+        <div class="activity-list">
+          <!-- Activity 1 -->
+          <div class="activity-item">
+            <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1550341914-8d19ad5a7c97?w=400&q=80')"></div>
+            <div class="act-details">
+              <div class="act-header">
+                <h3 class="serif">Private Louvre Tour</h3>
+                <span class="price sans">$120 / person</span>
+              </div>
+              <p class="sans act-desc">Skip the lines and explore the world's largest art museum with a certified historian.</p>
+              <div class="act-meta">
+                <span class="tag sans">3 Hours</span>
+                <span class="tag sans">Art & Culture</span>
+                <span class="rating">⭐ 5.0</span>
+              </div>
+            </div>
+            <button class="btn btn--primary add-btn">Add to Trip</button>
+          </div>
+
+          <!-- Activity 2 -->
+          <div class="activity-item">
+            <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1541810271568-7145741f24fe?w=400&q=80')"></div>
+            <div class="act-details">
+              <div class="act-header">
+                <h3 class="serif">Pastry Workshop in Marais</h3>
+                <span class="price sans">$85 / person</span>
+              </div>
+              <p class="sans act-desc">Learn the secrets of the perfect macaron in a boutique kitchen in the heart of Marais.</p>
+              <div class="act-meta">
+                <span class="tag sans">2 Hours</span>
+                <span class="tag sans">Culinary</span>
+                <span class="rating">⭐ 4.9</span>
+              </div>
+            </div>
+            <button class="btn btn--primary add-btn">Add to Trip</button>
+          </div>
+
+          <!-- Activity 3 -->
+          <div class="activity-item">
+            <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&q=80')"></div>
+            <div class="act-details">
+              <div class="act-header">
+                <h3 class="serif">Seine River Night Cruise</h3>
+                <span class="price sans">$45 / person</span>
+              </div>
+              <p class="sans act-desc">Experience the magic of Paris after dark with live music and champagne on the Seine.</p>
+              <div class="act-meta">
+                <span class="tag sans">1.5 Hours</span>
+                <span class="tag sans">Sightseeing</span>
+                <span class="rating">⭐ 4.7</span>
+              </div>
+            </div>
+            <button class="btn btn--primary add-btn">Add to Trip</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/activities.js"></script>
+</body>
+</html>

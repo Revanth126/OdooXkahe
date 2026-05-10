@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Explore Your Next Destination</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/discovery.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <!-- Search & Filters Header -->
+      <header class="top-header">
+        <div class="search-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Where do you want to go?" class="sans">
+        </div>
+        <div class="header-tools">
+          <button class="tool-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </button>
+          <a href="create-trip.html" class="btn btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="sans">New Trip</span>
+          </a>
+        </div>
+      </header>
+
+      <section class="discovery-body">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="badge sans">Curated Discovery</span>
+            <h1 class="serif">The Alpine <em>Serenity</em></h1>
+            <p class="sans">Discover hidden glass cabins and quiet trails in the heart of Switzerland.</p>
+            <button class="btn btn--white">Explore Collection</button>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories-row">
+          <button class="category-pill active">All</button>
+          <button class="category-pill">Coastal</button>
+          <button class="category-pill">Mountains</button>
+          <button class="category-pill">City Breaks</button>
+          <button class="category-pill">Hidden Gems</button>
+          <button class="category-pill">Luxury Stays</button>
+        </div>
+
+        <!-- Destination Grid -->
+        <div class="destination-section">
+          <h2 class="serif section-title">For your next adventure</h2>
+          <div class="dest-grid">
+            <!-- Card 1 -->
+            <div class="dest-card-layered">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Boutique Hotel">
+                <button class="wishlist-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  <h3 class="serif">Positano Mornings</h3>
+                  <span class="rating">⭐ 4.9</span>
+                </div>
+                <p class="sans card-sub">Italy • Boutique Stays</p>
+                <div class="card-footer">
+                  <span class="price sans">From $450/nt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="dest-card-layered">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80" alt="Santorini">
+                <button class="wishlist-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  <h3 class="serif">Blue Oia</h3>
+                  <span class="rating">⭐ 5.0</span>
+                </div>
+                <p class="sans card-sub">Greece • Luxury Villas</p>
+                <div class="card-footer">
+                  <span class="price sans">From $820/nt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="dest-card-layered">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=80" alt="Kyoto">
+                <button class="wishlist-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  <h3 class="serif">Kyoto Zen</h3>
+                  <span class="rating">⭐ 4.8</span>
+                </div>
+                <p class="sans card-sub">Japan • Traditional Ryokans</p>
+                <div class="card-footer">
+                  <span class="price sans">From $320/nt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/discovery.js"></script>
+</body>
+</html>

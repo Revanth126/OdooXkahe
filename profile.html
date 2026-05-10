@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Your Profile</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/profile.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation (Consistent with Discovery) -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill active">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <!-- Profile Header Section -->
+      <section class="profile-header">
+        <div class="header-banner"></div>
+        <div class="profile-info-row">
+          <div class="profile-main">
+            <div class="large-avatar">SK</div>
+            <div class="text-meta">
+              <h1 class="serif">Sandhana Krishnan</h1>
+              <p class="sans bio">Architect of journeys. Slow traveler. Currently dreaming of the Amalfi Coast.</p>
+              <div class="location sans">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Bangalore, India
+              </div>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button class="btn btn--ghost">Edit Profile</button>
+            <button class="btn btn--primary">Follow</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Grid -->
+      <section class="stats-row">
+        <div class="stat-card">
+          <span class="stat-val serif">12</span>
+          <span class="stat-label sans">Trips Taken</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val serif">8</span>
+          <span class="stat-label sans">Countries</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val serif">24k</span>
+          <span class="stat-label sans">Miles Traveled</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val serif">42</span>
+          <span class="stat-label sans">Saved Places</span>
+        </div>
+      </section>
+
+      <!-- Tabs Navigation -->
+      <nav class="profile-tabs">
+        <button class="tab-item active">Upcoming Trips</button>
+        <button class="tab-item">Past Adventures</button>
+        <button class="tab-item">My Collections</button>
+      </nav>
+
+      <!-- Tab Content: Upcoming Trips -->
+      <section class="tab-content">
+        <div class="upcoming-grid">
+          <!-- Trip Card 1 -->
+          <div class="trip-card-horizontal">
+            <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=400&q=80')"></div>
+            <div class="trip-details">
+              <div class="trip-header">
+                <span class="badge badge--sage sans">In 14 days</span>
+                <h3 class="serif">The Amalfi Chapter</h3>
+              </div>
+              <p class="sans trip-meta">May 24 – June 5 • 2 People</p>
+              <div class="trip-progress">
+                <div class="progress-label sans">75% planned</div>
+                <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+              </div>
+            </div>
+            <a href="trip-details.html" class="view-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+          </div>
+
+          <!-- Trip Card 2 (Placeholder) -->
+          <div class="trip-card-horizontal">
+            <div class="trip-img" style="background-image: url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&q=80')"></div>
+            <div class="trip-details">
+              <div class="trip-header">
+                <span class="badge badge--cream sans">Sept 2026</span>
+                <h3 class="serif">Nordic Solitude</h3>
+              </div>
+              <p class="sans trip-meta">Sept 12 – Sept 20 • 1 Person</p>
+              <div class="trip-progress">
+                <div class="progress-label sans">20% planned</div>
+                <div class="progress-bar"><div class="fill" style="width: 20%"></div></div>
+              </div>
+            </div>
+            <a href="#" class="view-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/profile.js"></script>
+</body>
+</html>

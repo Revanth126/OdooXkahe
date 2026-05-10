@@ -1,0 +1,213 @@
+/* ============================================
+   TRAVELOOP — Budget Styles
+   Screen 9: Finance Hub
+   ============================================ */
+
+/* ── Content Area ── */
+.content-area {
+  padding: var(--sp-8) var(--sp-12);
+  overflow-y: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--sp-12);
+}
+
+.header-intro h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--sp-1);
+}
+
+.header-intro h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.trip-selector {
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--cream-200);
+  background: white;
+  color: var(--ink-900);
+  outline: none;
+}
+
+/* ── Summary Cards ── */
+.budget-summary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-12);
+}
+
+.summary-card {
+  background: white;
+  padding: var(--sp-8);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.summary-card.total {
+  background: var(--ink-900);
+  color: white;
+}
+
+.summary-card .label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.summary-card .val {
+  font-size: var(--text-4xl);
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 100px;
+  margin: var(--sp-4) 0 var(--sp-2);
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: var(--sage-400);
+  border-radius: 100px;
+}
+
+.hint {
+  font-size: var(--text-2xs);
+  opacity: 0.5;
+}
+
+.status-tag {
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-top: var(--sp-4);
+  background: var(--cream-100);
+  color: var(--ink-400);
+  align-self: flex-start;
+}
+
+.status-tag.safe {
+  background: var(--sage-100);
+  color: var(--sage-500);
+}
+
+/* ── Analytics Grid ── */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-12);
+}
+
+.chart-container {
+  background: white;
+  padding: var(--sp-8);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-container h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--sp-6);
+}
+
+.canvas-wrap {
+  position: relative;
+  height: 240px;
+}
+
+/* ── Expense List ── */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-8);
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.expense-item {
+  background: white;
+  padding: var(--sp-5) var(--sp-6);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.3s ease;
+}
+
+.expense-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.exp-main {
+  flex: 1;
+}
+
+.exp-main .name {
+  display: block;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: 2px;
+}
+
+.exp-main .date {
+  font-size: var(--text-2xs);
+  color: var(--ink-300);
+}
+
+.expense-item .amount {
+  font-size: var(--text-xl);
+  color: var(--ink-900);
+}
+
+.category-tag {
+  font-size: var(--text-2xs);
+  color: var(--ink-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 120px;
+  text-align: right;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .budget-summary, .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}

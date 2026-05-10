@@ -1,0 +1,342 @@
+/* ============================================
+   TRAVELOOP — Global Design System Tokens
+   Premium Pastel Luxury Aesthetic
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;450;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  /* ── Core Palette ── */
+  --cream-50:   #fdfaf6;
+  --cream-100:  #faf5ed;
+  --cream-200:  #f5ede0;
+  --cream-300:  #eedcca;
+  --beige-400:  #e4c9aa;
+  --beige-500:  #d4aa80;
+
+  --blush-100:  #fce8e8;
+  --blush-200:  #f8d5d5;
+  --blush-300:  #f2b8b8;
+  --rose-400:   #e8989a;
+  --rose-500:   #d97d80;
+
+  --sage-100:   #e8ede9;
+  --sage-200:   #d4e0d5;
+  --sage-300:   #b8ceba;
+  --sage-400:   #90b094;
+  --sage-500:   #6d8f71;
+
+  --sky-100:    #e4eff8;
+  --sky-200:    #c8dfF2;
+  --sky-300:    #a3c8e8;
+  --sky-400:    #75aad8;
+
+  --lavender-100: #eee9f8;
+  --lavender-200: #ded5f5;
+  --lavender-300: #c5b8ec;
+  --lavender-400: #a896e0;
+
+  --sand-100:   #f8f2e8;
+  --sand-200:   #f0e6d2;
+  --sand-300:   #e3d0b5;
+
+  /* ── Neutral Text ── */
+  --ink-900:    #1a1612;
+  --ink-800:    #2e2820;
+  --ink-700:    #44392e;
+  --ink-600:    #5c4d3f;
+  --ink-500:    #7a6655;
+  --ink-400:    #9e8874;
+  --ink-300:    #c4b09d;
+  --ink-200:    #ddd0c2;
+  --ink-100:    #f0e9df;
+
+  /* ── Semantic Colors ── */
+  --success:    #7ab87e;
+  --warning:    #e8c26a;
+  --danger:     #e8807a;
+  --info:       #75aad8;
+
+  /* ── Primary Actions ── */
+  --primary:          var(--sage-500);
+  --primary-light:    var(--sage-300);
+  --primary-dark:     #4e6a52;
+  --primary-bg:       var(--sage-100);
+
+  --accent:           var(--rose-500);
+  --accent-light:     var(--blush-200);
+  --accent-dark:      #b85c60;
+
+  /* ── Surfaces ── */
+  --surface-0:   #ffffff;
+  --surface-1:   var(--cream-50);
+  --surface-2:   var(--cream-100);
+  --surface-3:   var(--cream-200);
+  --surface-card: rgba(255, 255, 255, 0.72);
+  --surface-glass: rgba(253, 250, 246, 0.60);
+
+  /* ── Typography ── */
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'Inter', -apple-system, sans-serif;
+  --font-body:   'DM Sans', 'Inter', sans-serif;
+
+  --text-2xs:  0.625rem;   /* 10px */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-md:   1.125rem;   /* 18px */
+  --text-lg:   1.25rem;    /* 20px */
+  --text-xl:   1.5rem;     /* 24px */
+  --text-2xl:  1.875rem;   /* 30px */
+  --text-3xl:  2.25rem;    /* 36px */
+  --text-4xl:  3rem;       /* 48px */
+  --text-5xl:  3.75rem;    /* 60px */
+  --text-6xl:  4.5rem;     /* 72px */
+
+  /* ── Spacing ── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 48px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs:  0 1px 3px rgba(60, 40, 20, 0.06);
+  --shadow-sm:  0 2px 8px rgba(60, 40, 20, 0.08), 0 1px 3px rgba(60, 40, 20, 0.05);
+  --shadow-md:  0 4px 20px rgba(60, 40, 20, 0.10), 0 2px 8px rgba(60, 40, 20, 0.06);
+  --shadow-lg:  0 8px 40px rgba(60, 40, 20, 0.12), 0 4px 16px rgba(60, 40, 20, 0.08);
+  --shadow-xl:  0 16px 64px rgba(60, 40, 20, 0.14), 0 8px 24px rgba(60, 40, 20, 0.10);
+  --shadow-glow-sage:  0 0 24px rgba(109, 143, 113, 0.25);
+  --shadow-glow-rose:  0 0 24px rgba(217, 125, 128, 0.25);
+
+  /* ── Transitions ── */
+  --ease-smooth:  cubic-bezier(0.34, 1.10, 0.64, 1.00);
+  --ease-spring:  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
+
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+  --duration-slower: 600ms;
+
+  /* ── Layout ── */
+  --sidebar-width: 240px;
+  --topbar-height: 64px;
+  --max-content:   1280px;
+}
+
+/* ── Global Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--ink-800);
+  background-color: var(--surface-1);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  outline: none;
+}
+
+/* ── Utility Classes ── */
+.serif     { font-family: var(--font-serif); }
+.sans      { font-family: var(--font-sans); }
+.text-muted { color: var(--ink-400); }
+.text-accent { color: var(--accent); }
+.text-primary { color: var(--primary); }
+
+/* ── Scroll-bar Styling ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-100); }
+::-webkit-scrollbar-thumb {
+  background: var(--beige-400);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--beige-500); }
+
+/* ── Global Sidebar & Layout ── */
+.app-layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+  background-color: var(--surface-1);
+}
+
+.sidebar {
+  background-color: var(--surface-0);
+  border-right: 1px solid var(--cream-200);
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-10) var(--sp-6);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  margin-bottom: var(--sp-16);
+}
+
+.sidebar-header .logo {
+  font-size: var(--text-2xl);
+  color: var(--ink-900);
+  letter-spacing: -0.02em;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  color: var(--ink-400);
+  transition: all var(--duration-base) var(--ease-smooth);
+  text-decoration: none;
+}
+
+.nav-item svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5px;
+}
+
+.nav-item span {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.nav-item:hover {
+  background-color: var(--cream-50);
+  color: var(--ink-900);
+}
+
+.nav-item.active {
+  background-color: var(--sage-100);
+  color: var(--sage-500);
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--cream-100);
+  margin-top: var(--sp-8);
+}
+
+.user-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-2);
+  border-radius: var(--radius-lg);
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.user-pill:hover {
+  background: var(--cream-50);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--beige-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-size: var(--text-xs);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-info .name {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-900);
+  line-height: 1;
+}
+
+.user-info .plan {
+  font-size: var(--text-2xs);
+  color: var(--ink-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .app-layout { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+}
+

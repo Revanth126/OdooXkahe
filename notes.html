@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Travel Notes & Vision</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/notes.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <div class="header-intro">
+          <h1 class="serif">Vision <em>Board</em></h1>
+          <p class="sans">Capture inspirations, thoughts, and fragments of your journey.</p>
+        </div>
+        <div class="header-actions">
+          <div class="search-bar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Search notes..." class="sans">
+          </div>
+          <button class="btn btn--primary sans">+ New Note</button>
+        </div>
+      </header>
+
+      <!-- Note Categories -->
+      <nav class="note-filters">
+        <button class="filter-btn active">All Notes</button>
+        <button class="filter-btn">Inspirations</button>
+        <button class="filter-btn">Packing Lists</button>
+        <button class="filter-btn">Dining Ideas</button>
+        <button class="filter-btn">Photo Spots</button>
+      </nav>
+
+      <!-- Vision Grid (Masonry / Scrapbook style) -->
+      <section class="notes-grid">
+        <!-- Note 1: Text Post-it -->
+        <div class="note-card note--pastel-sage" style="--rotate: -2deg;">
+          <div class="note-header">
+            <span class="tag sans">Dining Ideas</span>
+          </div>
+          <h3 class="serif">Amalfi Seafood</h3>
+          <p class="sans">Must try the 'Scialatielli ai frutti di mare' at that place near the pier. Check if they take reservations after 8 PM.</p>
+          <div class="note-footer">
+            <span class="date sans">2 hours ago</span>
+          </div>
+        </div>
+
+        <!-- Note 2: Photo Polaroid -->
+        <div class="note-card note--polaroid" style="--rotate: 3deg;">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=400&q=80" alt="Positano">
+          </div>
+          <div class="caption-wrap">
+            <p class="serif">The Morning Glow</p>
+            <span class="tag sans">Inspiration</span>
+          </div>
+        </div>
+
+        <!-- Note 3: To-Do List -->
+        <div class="note-card note--pastel-cream" style="--rotate: -1deg;">
+          <div class="note-header">
+            <span class="tag sans">Packing List</span>
+          </div>
+          <h3 class="serif">Summer Essentials</h3>
+          <ul class="checklist sans">
+            <li class="checked">Linen shirts</li>
+            <li>Wide-brim straw hat</li>
+            <li>Film camera + 4 rolls</li>
+            <li class="checked">Comfortable sandals</li>
+          </ul>
+        </div>
+
+        <!-- Note 4: Detailed Journal -->
+        <div class="note-card note--wide note--pastel-blush" style="--rotate: 1deg;">
+          <div class="note-header">
+            <span class="tag sans">Thoughts</span>
+          </div>
+          <h3 class="serif">The Philosophy of Slow Travel</h3>
+          <p class="sans">It's not about the number of cathedrals we see, but the number of quiet espressos we share. This trip, I want to focus on the textures—the rough stone of the walls, the cool silk of the evening breeze...</p>
+          <div class="note-footer">
+            <button class="btn--text sans">Continue writing →</button>
+          </div>
+        </div>
+
+        <!-- Note 5: Photo Polaroid -->
+        <div class="note-card note--polaroid" style="--rotate: -4deg;">
+          <div class="photo-wrap">
+            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=400&q=80" alt="Italian Street">
+          </div>
+          <div class="caption-wrap">
+            <p class="serif">Street Textures</p>
+            <span class="tag sans">Inspiration</span>
+          </div>
+        </div>
+
+        <!-- Note 6: Quick Link -->
+        <div class="note-card note--pastel-sky" style="--rotate: 2deg;">
+          <div class="note-header">
+            <span class="tag sans">Reference</span>
+          </div>
+          <h3 class="serif">Villa TreVille Link</h3>
+          <p class="sans">Booking confirmation and concierge contact details are saved in the dashboard.</p>
+          <a href="#" class="btn--text sans">Open Link</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/notes.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Community Stories</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/community.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <div class="header-intro">
+          <h1 class="serif">Community <em>Stories</em></h1>
+          <p class="sans">Shared experiences from our global collective of travelers.</p>
+        </div>
+        <div class="header-actions">
+          <div class="search-bar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Find stories or destinations..." class="sans">
+          </div>
+          <button class="btn btn--primary sans">Share Story</button>
+        </div>
+      </header>
+
+      <!-- Featured Story -->
+      <section class="featured-story">
+        <div class="featured-img" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"></div>
+        <div class="featured-content">
+          <span class="badge sans">Featured Story</span>
+          <h2 class="serif">The Slow Drift through <em>Venice</em></h2>
+          <p class="sans">How we found silence in the most crowded city in the world. A guide to the hidden canals of Cannaregio.</p>
+          <div class="featured-footer">
+            <div class="author">
+              <div class="av">EM</div>
+              <span class="sans">Elena Moretti</span>
+            </div>
+            <button class="btn btn--white sans">Read Full Story</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Masonry Grid -->
+      <section class="stories-grid">
+        <h3 class="serif section-title">Latest from the collective</h3>
+        
+        <div class="masonry">
+          <!-- Card 1 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=80" alt="Italy">
+            <div class="card-body">
+              <h4 class="serif">Postcards from Positano</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av">SK</div>
+                  <span class="sans">S. Krishnan</span>
+                </div>
+                <div class="stats sans">❤ 124</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80" alt="Norway">
+            <div class="card-body">
+              <h4 class="serif">Chasing the Arctic Light</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av" style="background: var(--sky-200); color: var(--sky-500);">JH</div>
+                  <span class="sans">J. Hansson</span>
+                </div>
+                <div class="stats sans">❤ 89</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=80" alt="Kyoto">
+            <div class="card-body">
+              <h4 class="serif">Kyoto's Hidden Temples</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av" style="background: var(--blush-200); color: var(--rose-500);">AI</div>
+                  <span class="sans">Akira I.</span>
+                </div>
+                <div class="stats sans">❤ 256</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=600&q=80" alt="Bali">
+            <div class="card-body">
+              <h4 class="serif">The Spirit of Ubud</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av" style="background: var(--sage-200); color: var(--sage-500);">LC</div>
+                  <span class="sans">L. Chen</span>
+                </div>
+                <div class="stats sans">❤ 142</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1512100356956-c1227c331f01?w=600&q=80" alt="Swiss Alps">
+            <div class="card-body">
+              <h4 class="serif">Alps: The High Altitude Retreat</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av">MM</div>
+                  <span class="sans">M. Miller</span>
+                </div>
+                <div class="stats sans">❤ 76</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=80" alt="Japan">
+            <div class="card-body">
+              <h4 class="serif">Wabi Sabi: Finding Beauty in Imperfection</h4>
+              <div class="card-meta">
+                <div class="author">
+                  <div class="av">SK</div>
+                  <span class="sans">S. Krishnan</span>
+                </div>
+                <div class="stats sans">❤ 312</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/community.js"></script>
+</body>
+</html>

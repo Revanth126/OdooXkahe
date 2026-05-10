@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Settings & Preferences</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/settings.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill active">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <div class="header-intro">
+          <h1 class="serif">Account <em>Settings</em></h1>
+          <p class="sans">Refine your Traveloop experience and preferences.</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn--white sans">Reset Changes</button>
+          <button class="btn btn--primary sans">Save Preferences</button>
+        </div>
+      </header>
+
+      <div class="settings-layout">
+        <!-- Settings Sub-Nav -->
+        <aside class="settings-nav">
+          <button class="set-nav-item active">General</button>
+          <button class="set-nav-item">Account Security</button>
+          <button class="set-nav-item">Notifications</button>
+          <button class="set-nav-item">Billing & Plan</button>
+          <button class="set-nav-item">Connections</button>
+        </aside>
+
+        <!-- Settings Content -->
+        <section class="settings-content">
+          <!-- Profile Section -->
+          <div class="settings-section">
+            <h3 class="serif section-title">Public <em>Profile</em></h3>
+            <div class="profile-edit-row">
+              <div class="large-avatar-edit">
+                <div class="avatar-circle">SK</div>
+                <button class="edit-overlay sans">Change</button>
+              </div>
+              <div class="form-grid">
+                <div class="input-group">
+                  <label class="sans">Full Name</label>
+                  <input type="text" value="Sandhana Krishnan" class="sans">
+                </div>
+                <div class="input-group">
+                  <label class="sans">Travel Bio</label>
+                  <textarea class="sans">Architect of journeys. Slow traveler. Currently dreaming of the Amalfi Coast.</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences Section -->
+          <div class="settings-section">
+            <h3 class="serif section-title">Travel <em>Preferences</em></h3>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <span class="name sans">Automatic Trip Suggestions</span>
+                  <span class="desc sans">Receive curated AI recommendations based on your vibe.</span>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <span class="name sans">Share Discovery with Community</span>
+                  <span class="desc sans">Allow others to see your public travel collections.</span>
+                </div>
+                <div class="toggle-switch active"></div>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <span class="name sans">Budget Alerts</span>
+                  <span class="desc sans">Get notified when you reach 80% of your trip budget.</span>
+                </div>
+                <div class="toggle-switch"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Danger Zone -->
+          <div class="settings-section danger-zone">
+            <h3 class="serif section-title">Danger <em>Zone</em></h3>
+            <div class="danger-box">
+              <div class="danger-text">
+                <span class="name sans">Deactivate Account</span>
+                <span class="desc sans">This will permanently delete all your trip data and memories.</span>
+              </div>
+              <button class="btn btn--outline-danger sans">Delete Account</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="scripts/settings.js"></script>
+</body>
+</html>

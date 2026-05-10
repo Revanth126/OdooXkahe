@@ -1,0 +1,245 @@
+/* ============================================
+   TRAVELOOP — Share Trip Styles
+   Screen 14: Collaborator Hub
+   ============================================ */
+
+/* ── Content Area ── */
+.content-area {
+  padding: var(--sp-8) var(--sp-12);
+  overflow-y: auto;
+}
+
+.top-header {
+  margin-bottom: var(--sp-8);
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--ink-400);
+  font-size: var(--text-sm);
+}
+
+/* ── Celebration Hero ── */
+.celebration-hero {
+  height: 320px;
+  border-radius: var(--radius-3xl);
+  background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--sp-12);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-12);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 100%);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 500px;
+}
+
+.hero-text .badge {
+  background: var(--sage-400);
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xs);
+  margin-bottom: var(--sp-4);
+  display: inline-block;
+}
+
+.hero-text h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--sp-2);
+}
+
+.hero-text h1 em {
+  font-style: italic;
+  color: var(--cream-200);
+}
+
+.hero-text p {
+  font-size: var(--text-lg);
+  opacity: 0.8;
+}
+
+/* ── Share Grid ── */
+.share-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--sp-10);
+}
+
+.invite-panel, .collaborators-panel {
+  background: white;
+  padding: var(--sp-10);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.invite-panel h2, .collaborators-panel h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--sp-2);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--ink-400);
+  margin-bottom: var(--sp-8);
+}
+
+.invite-form {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-10);
+}
+
+.invite-form input {
+  flex: 1;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--cream-200);
+  background: var(--cream-50);
+}
+
+.role-select {
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--cream-200);
+  background: white;
+}
+
+.share-link-box {
+  border-top: 1px solid var(--cream-100);
+  padding-top: var(--sp-8);
+}
+
+.share-link-box .label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--ink-300);
+  margin-bottom: var(--sp-3);
+}
+
+.link-input {
+  display: flex;
+  background: var(--cream-100);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-2);
+}
+
+.link-input input {
+  background: transparent;
+  border: none;
+  flex: 1;
+  padding: 0 var(--sp-3);
+  font-size: var(--text-xs);
+  color: var(--ink-500);
+}
+
+.copy-btn {
+  background: white;
+  border: none;
+  padding: var(--sp-2);
+  border-radius: var(--radius-md);
+  color: var(--ink-400);
+  cursor: pointer;
+}
+
+/* Collaborators List */
+.collaborators-panel h2 em {
+  font-style: italic;
+  color: var(--sage-500);
+}
+
+.collaborator-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+
+.collab-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+  border-radius: var(--radius-2xl);
+  background: var(--cream-50);
+  border: 1px solid transparent;
+}
+
+.collab-item:hover {
+  border-color: var(--cream-200);
+}
+
+.collab-item .av {
+  width: 44px;
+  height: 44px;
+  background: var(--beige-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: white;
+}
+
+.collab-info {
+  flex: 1;
+}
+
+.collab-info .name {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.collab-info .role {
+  font-size: var(--text-2xs);
+  color: var(--ink-300);
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: var(--ink-200);
+  cursor: pointer;
+  padding: var(--sp-2);
+}
+
+.collab-item.empty {
+  border: 2px dashed var(--cream-200);
+  background: transparent;
+  cursor: pointer;
+}
+
+.av-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px dashed var(--cream-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-200);
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .share-grid { grid-template-columns: 1fr; }
+}

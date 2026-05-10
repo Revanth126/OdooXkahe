@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Finance Hub</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/budget.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <div class="header-intro">
+          <h1 class="serif">Finance <em>Analytics</em></h1>
+          <p class="sans">Keep your wanderlust within your budget.</p>
+        </div>
+        <div class="header-tools">
+          <select class="trip-selector sans">
+            <option>The Amalfi Chapter</option>
+            <option>Nordic Solitude</option>
+            <option>Kyoto Zen Days</option>
+          </select>
+          <button class="btn btn--primary sans">+ Add Expense</button>
+        </div>
+      </header>
+
+      <!-- Budget High-Level Overview -->
+      <section class="budget-summary">
+        <div class="summary-card total">
+          <span class="label sans">Total Budget</span>
+          <span class="val serif">$4,500.00</span>
+          <div class="progress-bar"><div class="fill" style="width: 68%"></div></div>
+          <span class="hint sans">68% spent ($3,060.00)</span>
+        </div>
+        <div class="summary-card highlight">
+          <span class="label sans">Remaining</span>
+          <span class="val serif">$1,440.00</span>
+          <span class="status-tag sans safe">On Track</span>
+        </div>
+        <div class="summary-card highlight">
+          <span class="label sans">Avg Daily Spend</span>
+          <span class="val serif">$255.00</span>
+          <span class="status-tag sans">Normal</span>
+        </div>
+      </section>
+
+      <!-- Charts & Visuals -->
+      <section class="analytics-grid">
+        <div class="chart-container">
+          <h3 class="serif">Spending by Category</h3>
+          <div class="canvas-wrap">
+            <canvas id="categoryChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-container wide">
+          <h3 class="serif">Spending Trend</h3>
+          <div class="canvas-wrap">
+            <canvas id="trendChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Expenses List -->
+      <section class="expenses-section">
+        <div class="section-header">
+          <h2 class="serif">Recent Expenses</h2>
+          <button class="btn btn--text sans">Export Report ⤓</button>
+        </div>
+
+        <div class="expense-list">
+          <!-- Item 1 -->
+          <div class="expense-item">
+            <div class="cat-icon" style="background: var(--sky-100); color: var(--sky-500);">✈</div>
+            <div class="exp-main">
+              <span class="name sans">Alitalia Flight - Rome</span>
+              <span class="date sans">May 10, 2026</span>
+            </div>
+            <span class="amount serif">$820.00</span>
+            <span class="category-tag sans">Transport</span>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="expense-item">
+            <div class="cat-icon" style="background: var(--sage-100); color: var(--sage-500);">🏨</div>
+            <div class="exp-main">
+              <span class="name sans">Villa TreVille - Deposit</span>
+              <span class="date sans">May 08, 2026</span>
+            </div>
+            <span class="amount serif">$1,200.00</span>
+            <span class="category-tag sans">Accommodation</span>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="expense-item">
+            <div class="cat-icon" style="background: var(--blush-100); color: var(--rose-500);">🍽</div>
+            <div class="exp-main">
+              <span class="name sans">Dinner at La Sponda</span>
+              <span class="date sans">May 05, 2026</span>
+            </div>
+            <span class="amount serif">$240.00</span>
+            <span class="category-tag sans">Dining</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/budget.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Packing Assistant</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/packing-list.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <div class="header-intro">
+          <h1 class="serif">Packing <em>Assistant</em></h1>
+          <p class="sans">Thoughtfully curated essentials for your Amalfi journey.</p>
+        </div>
+        <div class="header-actions">
+          <div class="packing-progress">
+            <div class="progress-info">
+              <span class="count sans">18/42 items packed</span>
+              <span class="percent sans">42%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width: 42%"></div></div>
+          </div>
+          <button class="btn btn--primary sans">+ Add Item</button>
+        </div>
+      </header>
+
+      <!-- Category Navigation -->
+      <nav class="category-nav">
+        <button class="cat-btn active">All Essentials</button>
+        <button class="cat-btn">Clothing</button>
+        <button class="cat-btn">Electronics</button>
+        <button class="cat-btn">Documents</button>
+        <button class="cat-btn">Toiletries</button>
+      </nav>
+
+      <!-- Smart Suggestion Card -->
+      <section class="smart-suggestion">
+        <div class="suggestion-icon">✨</div>
+        <div class="suggestion-text">
+          <h4 class="serif">Smart Advice for Positano</h4>
+          <p class="sans">The forecast predicts warm sunny days and cool evenings. We recommend adding a <strong>light linen blazer</strong> and <strong>high-SPF sunscreen</strong> to your list.</p>
+        </div>
+        <button class="btn btn--white sans">Add Suggestions</button>
+      </section>
+
+      <!-- Checklist Grid -->
+      <section class="checklist-grid">
+        <!-- Clothing Category -->
+        <div class="list-section">
+          <h3 class="serif section-title">Clothing <em>& Style</em></h3>
+          <div class="items-list">
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Linen shirts (4)</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">Cotton chinos</span>
+            </div>
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Swimming trunks</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">Evening dinner jacket</span>
+            </div>
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Leather sandals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electronics Category -->
+        <div class="list-section">
+          <h3 class="serif section-title">Electronics <em>& Gear</em></h3>
+          <div class="items-list">
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Film camera + extra rolls</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">Universal power adapter</span>
+            </div>
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Noise-canceling headphones</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">Portable power bank</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents Category -->
+        <div class="list-section">
+          <h3 class="serif section-title">Vital <em>Documents</em></h3>
+          <div class="items-list">
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Passport & Visa copies</span>
+            </div>
+            <div class="item checked">
+              <div class="checkbox">✓</div>
+              <span class="name sans">Travel insurance papers</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">International driving permit</span>
+            </div>
+            <div class="item">
+              <div class="checkbox"></div>
+              <span class="name sans">Hotel booking confirmations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/packing-list.js"></script>
+</body>
+</html>

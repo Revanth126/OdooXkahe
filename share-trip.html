@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — Invite Collaborators</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/share-trip.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <header class="top-header">
+        <a href="itinerary.html" class="back-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sans">Back to Itinerary</span>
+        </a>
+      </header>
+
+      <section class="share-celebration">
+        <div class="celebration-hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-text">
+            <span class="badge sans">Journey Sharing</span>
+            <h1 class="serif">Better <em>Together</em></h1>
+            <p class="sans">Invite your favorite travelers to co-craft The Amalfi Chapter.</p>
+          </div>
+        </div>
+
+        <div class="share-grid">
+          <!-- Invite Section -->
+          <div class="invite-panel">
+            <h2 class="serif">Send Invitations</h2>
+            <p class="sans subtitle">Email invitations grant full collaboration access.</p>
+            
+            <div class="invite-form">
+              <input type="email" placeholder="Enter traveler's email..." class="sans">
+              <select class="sans role-select">
+                <option>Co-Planner</option>
+                <option>Viewer Only</option>
+              </select>
+              <button class="btn btn--primary sans">Send Invite</button>
+            </div>
+
+            <div class="share-link-box">
+              <span class="label sans">Or share via private link</span>
+              <div class="link-input">
+                <input type="text" readonly value="traveloop.com/share/amalfi-2026-vibe" class="sans">
+                <button class="copy-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Collaborators List -->
+          <div class="collaborators-panel">
+            <h2 class="serif">The <em>Collective</em></h2>
+            <div class="collaborator-list">
+              <!-- Item 1 (You) -->
+              <div class="collab-item">
+                <div class="av">SK</div>
+                <div class="collab-info">
+                  <span class="name sans">Sandhana Krishnan (You)</span>
+                  <span class="role sans">Owner • Architect</span>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="collab-item">
+                <div class="av" style="background: var(--rose-200); color: var(--rose-500);">AJ</div>
+                <div class="collab-info">
+                  <span class="name sans">Arjun J.</span>
+                  <span class="role sans">Co-Planner • Editor</span>
+                </div>
+                <button class="remove-btn">✕</button>
+              </div>
+              <!-- Empty Slot -->
+              <div class="collab-item empty">
+                <div class="av-placeholder">+</div>
+                <div class="collab-info">
+                  <span class="name sans">Invite more...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/share-trip.js"></script>
+</body>
+</html>

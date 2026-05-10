@@ -1,0 +1,234 @@
+/* ============================================
+   TRAVELOOP — Profile Styles
+   Screen 5: Personal Dashboard
+   ============================================ */
+
+/* ── Content Area ── */
+.content-area {
+  padding: var(--sp-8) var(--sp-12);
+  overflow-y: auto;
+}
+
+/* ── Profile Header ── */
+.profile-header {
+  background: white;
+  border-radius: var(--radius-3xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--sp-10);
+}
+
+.header-banner {
+  height: 200px;
+  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-info-row {
+  padding: var(--sp-8) var(--sp-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profile-main {
+  display: flex;
+  gap: var(--sp-6);
+  align-items: flex-end;
+}
+
+.large-avatar {
+  width: 120px;
+  height: 120px;
+  background: var(--beige-400);
+  border-radius: var(--radius-2xl);
+  border: 6px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: white;
+  margin-top: -60px;
+  box-shadow: var(--shadow-md);
+}
+
+.text-meta h1 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--sp-1);
+}
+
+.bio {
+  color: var(--ink-500);
+  margin-bottom: var(--sp-2);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  color: var(--ink-300);
+  font-size: var(--text-sm);
+}
+
+.profile-actions {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+
+/* ── Stats ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-12);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--sp-6);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-xs);
+}
+
+.stat-val {
+  display: block;
+  font-size: var(--text-4xl);
+  color: var(--sage-500);
+  margin-bottom: var(--sp-1);
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-300);
+}
+
+/* ── Tabs ── */
+.profile-tabs {
+  display: flex;
+  gap: var(--sp-8);
+  border-bottom: 1px solid var(--cream-200);
+  margin-bottom: var(--sp-8);
+}
+
+.tab-item {
+  padding: var(--sp-3) 0;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--ink-300);
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-item.active {
+  color: var(--ink-900);
+  font-weight: 600;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ink-900);
+}
+
+/* ── Trip Cards (Horizontal) ── */
+.upcoming-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.trip-card-horizontal {
+  background: white;
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  padding: var(--sp-4);
+  gap: var(--sp-6);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.3s ease;
+}
+
+.trip-card-horizontal:hover {
+  transform: translateX(8px);
+}
+
+.trip-img {
+  width: 140px;
+  height: 100px;
+  border-radius: var(--radius-lg);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.trip-details {
+  flex: 1;
+}
+
+.trip-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-1);
+}
+
+.badge {
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge--sage { background: var(--sage-100); color: var(--sage-500); }
+.badge--cream { background: var(--cream-200); color: var(--ink-400); }
+
+.trip-meta {
+  font-size: var(--text-sm);
+  color: var(--ink-300);
+  margin-bottom: var(--sp-4);
+}
+
+.trip-progress {
+  max-width: 200px;
+}
+
+.progress-label {
+  font-size: var(--text-2xs);
+  color: var(--ink-400);
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--cream-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: var(--sage-400);
+}
+
+.view-btn {
+  color: var(--ink-200);
+  transition: color 0.3s ease;
+}
+
+.trip-card-horizontal:hover .view-btn {
+  color: var(--ink-900);
+}

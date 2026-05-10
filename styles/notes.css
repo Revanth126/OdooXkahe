@@ -1,0 +1,193 @@
+/* ============================================
+   TRAVELOOP — Notes Styles
+   Screen 11: Vision Board & Scrapbook
+   ============================================ */
+
+/* ── Content Area ── */
+.content-area {
+  padding: var(--sp-8) var(--sp-12);
+  overflow-y: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--sp-8);
+}
+
+.header-intro h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--sp-1);
+}
+
+.header-intro h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.search-bar {
+  background: white;
+  border-radius: var(--radius-full);
+  padding: var(--sp-2) var(--sp-6);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  box-shadow: var(--shadow-sm);
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: var(--text-sm);
+}
+
+/* ── Note Filters ── */
+.note-filters {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-12);
+}
+
+.filter-btn {
+  padding: var(--sp-2) var(--sp-5);
+  background: white;
+  border: 1px solid var(--cream-200);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--ink-400);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: var(--ink-900);
+  color: white;
+  border-color: var(--ink-900);
+}
+
+/* ── Notes Grid ── */
+.notes-grid {
+  column-count: 3;
+  column-gap: var(--sp-8);
+  padding-bottom: var(--sp-12);
+}
+
+.note-card {
+  break-inside: avoid;
+  padding: var(--sp-8);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--sp-8);
+  box-shadow: var(--shadow-sm);
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.note-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+}
+
+.note-header {
+  margin-bottom: var(--sp-4);
+}
+
+.tag {
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.note-card h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--sp-3);
+}
+
+.note-card p {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+
+/* Pastel Variations */
+.note--pastel-sage { background: var(--sage-100); }
+.note--pastel-cream { background: var(--cream-200); }
+.note--pastel-blush { background: var(--blush-100); }
+.note--pastel-sky { background: var(--sky-100); }
+
+/* Polaroid Specifics */
+.note--polaroid {
+  background: white;
+  padding: var(--sp-4) var(--sp-4) var(--sp-10);
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.photo-wrap {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  margin-bottom: var(--sp-6);
+}
+
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption-wrap p {
+  font-size: var(--text-xl);
+  margin-bottom: var(--sp-1);
+  color: var(--ink-900);
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.checklist li {
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.checklist li::before {
+  content: '☐';
+  color: var(--ink-300);
+}
+
+.checklist li.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.checklist li.checked::before {
+  content: '✓';
+  color: var(--sage-500);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .notes-grid { column-count: 2; }
+}
+
+@media (max-width: 768px) {
+  .notes-grid { column-count: 1; }
+}

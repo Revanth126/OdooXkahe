@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveloop — The Amalfi Chapter</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/itinerary.css" />
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo serif">Traveloop</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="discovery.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="sans">Explore</span>
+        </a>
+        <a href="my-trips.html" class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <a href="budget.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="sans">Finances</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="sans">Community</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="profile.html" class="user-pill">
+          <div class="avatar">SK</div>
+          <div class="user-info">
+            <span class="name sans">S. Krishnan</span>
+            <span class="plan sans">Premium</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <!-- Back Link & Header -->
+      <header class="top-header">
+        <a href="my-trips.html" class="back-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sans">My Trips</span>
+        </a>
+        <div class="header-actions">
+          <button class="tool-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></button>
+          <button class="btn btn--ghost sans">Manage Trip</button>
+        </div>
+      </header>
+
+      <!-- Trip Hero Banner -->
+      <section class="trip-hero">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <h1 class="serif">The Amalfi <em>Chapter</em></h1>
+          <p class="sans">May 24 – June 5, 2026 • 2 Travelers</p>
+        </div>
+      </section>
+
+      <!-- Itinerary Layout -->
+      <div class="itinerary-layout">
+        <!-- Left: Day Navigation -->
+        <aside class="day-nav">
+          <h3 class="sans title">Your Schedule</h3>
+          <div class="day-list">
+            <button class="day-item active">
+              <span class="day-num serif">01</span>
+              <div class="day-info">
+                <span class="day-name sans">Day 1</span>
+                <span class="day-date sans">May 24</span>
+              </div>
+            </button>
+            <button class="day-item">
+              <span class="day-num serif">02</span>
+              <div class="day-info">
+                <span class="day-name sans">Day 2</span>
+                <span class="day-date sans">May 25</span>
+              </div>
+            </button>
+            <button class="day-item">
+              <span class="day-num serif">03</span>
+              <div class="day-info">
+                <span class="day-name sans">Day 3</span>
+                <span class="day-date sans">May 26</span>
+              </div>
+            </button>
+            <button class="day-item">
+              <span class="day-num serif">04</span>
+              <div class="day-info">
+                <span class="day-name sans">Day 4</span>
+                <span class="day-date sans">May 27</span>
+              </div>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Middle: Timeline -->
+        <section class="timeline-area">
+          <div class="timeline-header">
+            <h2 class="serif">Arrival in <em>Positano</em></h2>
+            <button class="btn btn--primary add-activity-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="sans">Add Activity</span>
+            </button>
+          </div>
+
+          <div class="timeline-list">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="time-marker">
+                <span class="time sans">10:30 AM</span>
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="activity-card">
+                <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1520116468816-95b69f847357?w=300&q=80')"></div>
+                <div class="act-content">
+                  <h4 class="serif">Check-in at Villa TreVille</h4>
+                  <p class="sans act-loc">Via Arienzo, 30, Positano</p>
+                  <p class="sans act-note">Refresh and settle in before exploring.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="time-marker">
+                <span class="time sans">01:00 PM</span>
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="activity-card">
+                <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=300&q=80')"></div>
+                <div class="act-content">
+                  <h4 class="serif">Lunch at Chez Black</h4>
+                  <p class="sans act-loc">Via del Brigantino, 19, Positano</p>
+                  <p class="sans act-note">Famous seafood pasta by the beach.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="time-marker">
+                <span class="time sans">04:30 PM</span>
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              <div class="activity-card">
+                <div class="act-img" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=300&q=80')"></div>
+                <div class="act-content">
+                  <h4 class="serif">Private Boat Sunset Cruise</h4>
+                  <p class="sans act-loc">Positano Pier</p>
+                  <p class="sans act-note">Champagne and views of the coast from the water.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Map Preview / Quick Tools -->
+        <aside class="itinerary-tools">
+          <div class="map-card">
+            <div class="map-placeholder">
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&q=80" alt="Map Preview">
+              <div class="map-overlay">
+                <button class="btn btn--white sans">Open Map View</button>
+              </div>
+            </div>
+            <div class="map-details">
+              <h5 class="serif">Route Summary</h5>
+              <p class="sans">Today: 4.2 km total travel</p>
+            </div>
+          </div>
+
+          <div class="weather-card">
+            <h5 class="serif">Positano Weather</h5>
+            <div class="weather-row">
+              <span class="temp serif">24°C</span>
+              <span class="condition sans">☀️ Sunny</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="scripts/itinerary.js"></script>
+</body>
+</html>
