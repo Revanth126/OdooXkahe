@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloop - My Trips</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body { padding-top: 100px; padding-bottom: 4rem; }
+        
+        .page-header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            margin-bottom: 2rem;
+        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 0; }
+        
+        /* Tabs */
+        .tabs {
+            display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color);
+        }
+        .tab {
+            padding: 0.75rem 1.5rem; color: var(--text-muted); font-weight: 600; cursor: pointer;
+            border-bottom: 2px solid transparent; transition: all 0.2s;
+        }
+        .tab:hover { color: var(--text-main); }
+        .tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+        /* Grid */
+        .trips-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;
+        }
+
+        /* Trip Card Specifics */
+        .card-actions {
+            display: flex; gap: 0.5rem; margin-top: 1rem;
+        }
+        .card-actions .btn-secondary { flex: 1; text-align: center; }
+        .card-actions .btn-icon {
+            background-color: transparent; border: 1px solid var(--border-color); color: var(--text-muted);
+            border-radius: var(--radius-btn); padding: 0.5rem 0.75rem; cursor: pointer; transition: all 0.2s;
+        }
+        .card-actions .btn-icon:hover { color: var(--danger); border-color: var(--danger); background: rgba(239,71,111,0.1); }
+        
+        .stop-count {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            color: var(--text-main); font-size: 0.875rem; background: var(--input-bg);
+            padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="dashboard.html" class="logo">Traveloop</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="my-trips.html" class="active">My Trips</a>
+                <a href="explore.html">Explore</a>
+            </nav>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=User&background=FF5A5F&color=fff" alt="User Profile" id="userAvatar">
+            </div>
+        </div>
+    </header>
+
+    <main class="container animate-fade-in-up">
+        
+        <div class="page-header">
+            <h1>My Trips</h1>
+            <a href="create-trip.html" class="btn-primary" style="text-decoration: none;">➕ Plan New Trip</a>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">All Trips</div>
+            <div class="tab">Upcoming</div>
+            <div class="tab">Drafts</div>
+            <div class="tab">Past</div>
+        </div>
+
+        <div class="trips-grid" id="all-trips-container">
+            <!-- Cards will be injected by app.js -->
+        </div>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/pages/dashboard.js"></script>
+</body>
+</html>

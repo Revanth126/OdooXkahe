@@ -1,0 +1,44 @@
+[
+  {
+    "id": "t1",
+    "destinationId": "d1",
+    "title": "Santorini Romantic Getaway",
+    "description": "A 5-day luxurious retreat in Oia with private boat tours, wine tasting, and premium accommodation overlooking the caldera.",
+    "price": 1299.00,
+    "durationDays": 5,
+    "imageUrl": "/images/trip_santorini.png",
+    "itinerary": [
+      { "day": 1, "title": "Arrival & Welcome Dinner", "description": "Arrive at Santorini airport, transfer to the luxury cliffside hotel. Welcome dinner at a local taverna." },
+      { "day": 2, "title": "Caldera Cruise", "description": "Private catamaran cruise around the caldera, including snorkeling and a barbecue lunch on board." },
+      { "day": 3, "title": "Wine Tasting Tour", "description": "Visit three local wineries and learn about the unique volcanic wines of Santorini." },
+      { "day": 4, "title": "Free Exploration", "description": "A day at leisure to explore the narrow streets of Oia or relax at the beach." },
+      { "day": 5, "title": "Departure", "description": "Transfer to the airport for your flight home." }
+    ],
+    "included": ["Accommodation", "Breakfast", "Airport Transfers", "Catamaran Cruise", "Wine Tour"],
+    "excluded": ["Flights", "Personal Expenses"],
+    "rating": 4.9,
+    "reviewsCount": 128
+  },
+  {
+    "id": "t2",
+    "destinationId": "d2",
+    "title": "Alpine Adventure Explorer",
+    "description": "A 7-day thrilling journey through the Swiss Alps, featuring guided hikes, glacier walks, and scenic train rides.",
+    "price": 1850.00,
+    "durationDays": 7,
+    "imageUrl": "/images/trip_alps_hiking.png",
+    "itinerary": [
+      { "day": 1, "title": "Arrival in Zurich", "description": "Transfer to Interlaken, your basecamp for the adventure." },
+      { "day": 2, "title": "Jungfraujoch Excursion", "description": "Take the cogwheel train to the Top of Europe. Enjoy panoramic views and ice palace." },
+      { "day": 3, "title": "Eiger Trail Hike", "description": "Guided hike along the foot of the famous Eiger North Face." },
+      { "day": 4, "title": "Glacier Exploration", "description": "A guided walk on the Aletsch Glacier, the largest in the Alps." },
+      { "day": 5, "title": "Free Day / Optional Paragliding", "description": "Relax in Interlaken or book an optional paragliding flight." },
+      { "day": 6, "title": "Scenic GoldenPass Line", "description": "Train ride to Lucerne, exploring the historic old town." },
+      { "day": 7, "title": "Departure", "description": "Return to Zurich for departure." }
+    ],
+    "included": ["Train Passes", "Guided Hikes", "Accommodation", "Breakfast"],
+    "excluded": ["Flights", "Lunches/Dinners", "Optional Activities"],
+    "rating": 4.8,
+    "reviewsCount": 85
+  }
+]

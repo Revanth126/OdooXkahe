@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloop - Itinerary Builder</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body { padding-top: 100px; padding-bottom: 4rem; }
+        
+        .builder-header { 
+            display: flex; justify-content: space-between; align-items: flex-end; 
+            margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;
+        }
+        .builder-header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+        .builder-header p { color: var(--primary); font-weight: 600; }
+
+        /* Timeline / Stop Styles */
+        .timeline {
+            display: flex; flex-direction: column; gap: 2rem;
+            position: relative;
+        }
+        
+        /* The connecting vertical line */
+        .timeline::before {
+            content: ''; position: absolute; top: 0; bottom: 0; left: 24px;
+            width: 2px; background-color: var(--border-color);
+            z-index: -1;
+        }
+
+        .stop-card {
+            display: flex; gap: 1.5rem; align-items: flex-start;
+        }
+
+        /* The circle on the timeline */
+        .stop-indicator {
+            width: 50px; height: 50px; border-radius: 50%;
+            background-color: var(--bg-color); border: 2px solid var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: var(--primary); z-index: 1; flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(0, 180, 216, 0.2);
+        }
+
+        .stop-content {
+            flex-grow: 1; background-color: var(--elevated-card-bg);
+            border: 1px solid var(--border-color); border-radius: var(--radius-card);
+            padding: 1.5rem; box-shadow: var(--shadow-md);
+        }
+
+        .stop-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;
+        }
+        .stop-title h3 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 0; display: flex; align-items: center; gap: 0.5rem;}
+        .stop-dates { color: var(--text-muted); font-size: 0.875rem; }
+        
+        .stop-actions { display: flex; gap: 0.5rem; }
+        .stop-actions button {
+            background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted);
+            cursor: pointer; border-radius: var(--radius-btn); padding: 0.4rem 0.6rem; transition: all 0.2s;
+        }
+        .stop-actions button:hover { background: var(--border-color); color: var(--text-main); }
+        .stop-actions button.delete-btn:hover { background: rgba(239, 71, 111, 0.1); color: var(--danger); border-color: var(--danger); }
+
+        /* Activities List */
+        .activity-list {
+            display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;
+        }
+        .activity-item {
+            display: flex; align-items: center; justify-content: space-between;
+            background-color: var(--card-bg); padding: 0.75rem 1rem;
+            border-radius: var(--radius-input); border: 1px solid var(--border-color);
+            transition: transform 0.2s; cursor: grab;
+        }
+        .activity-item:hover {
+            transform: translateX(5px);
+            border-color: var(--primary);
+        }
+        .activity-info { display: flex; align-items: center; gap: 1rem; }
+        .activity-time { color: var(--primary); font-weight: 700; font-size: 0.875rem; min-width: 60px;}
+        .activity-name { font-weight: 600; }
+        .activity-cost { color: var(--success); font-size: 0.875rem; font-weight: 600; background: rgba(6, 214, 160, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;}
+
+        /* Add Buttons */
+        .add-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: var(--primary); background: rgba(0, 180, 216, 0.1);
+            border: 1px dashed var(--primary); border-radius: var(--radius-btn);
+            padding: 0.5rem 1rem; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .add-btn:hover { background: var(--primary); color: white; }
+
+        .add-stop-container { margin-top: 2rem; margin-left: 74px; }
+        
+        @media (max-width: 768px) {
+            .timeline::before { left: 20px; }
+            .stop-indicator { width: 40px; height: 40px; font-size: 0.875rem; }
+            .stop-card { gap: 1rem; }
+            .add-stop-container { margin-left: 56px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="dashboard.html" class="logo">Traveloop</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="my-trips.html">My Trips</a>
+                <a href="explore.html">Explore</a>
+            </nav>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=User&background=FF5A5F&color=fff" alt="User Profile" id="userAvatar">
+            </div>
+        </div>
+    </header>
+
+    <main class="container animate-fade-in-up">
+        
+        <!-- Builder Header -->
+        <div class="builder-header">
+            <div>
+                <h1>Summer Euro Trip 2026</h1>
+                <p>Aug 12 - Aug 26, 2026 • 14 Days</p>
+            </div>
+            <div>
+                <a href="itinerary-view.html" class="btn-secondary" style="margin-right: 0.5rem; text-decoration: none;">Preview</a>
+                <a href="itinerary-view.html#budget" class="btn-primary" style="text-decoration: none;">View Budget</a>
+            </div>
+        </div>
+
+        <!-- Timeline / Stops -->
+        <div class="timeline">
+            
+            <!-- Stop 1: Paris -->
+            <div class="stop-card animate-fade-in-up" style="animation-delay: 0.1s;">
+                <div class="stop-indicator">1</div>
+                <div class="stop-content">
+                    <div class="stop-header">
+                        <div class="stop-title">
+                            <h3>🇫🇷 Paris, France</h3>
+                            <span class="stop-dates">Aug 12 - Aug 16 (4 Nights)</span>
+                        </div>
+                        <div class="stop-actions">
+                            <button title="Edit Dates">✎</button>
+                            <button class="delete-btn" title="Remove Stop">🗑</button>
+                        </div>
+                    </div>
+
+                    <!-- Activities -->
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <span class="activity-time">Day 1</span>
+                                <div>
+                                    <div class="activity-name">Check-in at Hotel Lutetia</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Accommodation • 14:00</div>
+                                </div>
+                            </div>
+                            <span class="activity-cost">$450</span>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <span class="activity-time">Day 2</span>
+                                <div>
+                                    <div class="activity-name">Eiffel Tower & Seine Cruise</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Sightseeing • 10:00 AM</div>
+                                </div>
+                            </div>
+                            <span class="activity-cost">$85</span>
+                        </div>
+                    </div>
+
+                    <a href="explore.html" class="add-btn">➕ Add Activity</a>
+                </div>
+            </div>
+
+            <!-- Stop 2: Empty/Planning State -->
+            <div class="stop-card animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="stop-indicator">2</div>
+                <div class="stop-content" style="border-style: dashed;">
+                    <div class="stop-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                        <div class="stop-title">
+                            <h3 style="color: var(--text-muted);">🇨🇭 Interlaken, Switzerland</h3>
+                            <span class="stop-dates">Aug 16 - Aug 20 (4 Nights)</span>
+                        </div>
+                        <div class="stop-actions">
+                            <button title="Edit Dates">✎</button>
+                            <button class="delete-btn" title="Remove Stop">🗑</button>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">No activities planned for this stop yet.</p>
+                        <a href="explore.html" class="add-btn">➕ Add Activity</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add New Stop -->
+        <div class="add-stop-container animate-fade-in-up" style="animation-delay: 0.3s;">
+            <a href="explore.html" class="btn-primary" style="background-color: var(--card-bg); border: 2px dashed var(--primary); color: var(--primary);">
+                ➕ Add Another Stop
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
