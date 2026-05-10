@@ -1,31 +1,15 @@
 import checklistData from "../data/checklistData";
 
 function PackingChecklist() {
-
-  const packedItems = checklistData.filter(
-    (item) => item.packed
-  ).length;
-
-  const remainingItems =
-    checklistData.length - packedItems;
-
-  const progress = Math.floor(
-    (packedItems / checklistData.length) * 100
-  );
-
   return (
     <div
       style={{
+        background: "#FAF7F2",
         minHeight: "100vh",
-        background: "#06131F",
-        color: "#F8FAFC",
         padding: "40px",
         fontFamily: "sans-serif",
       }}
     >
-
-      {/* HEADER */}
-
       <div
         style={{
           display: "flex",
@@ -34,12 +18,12 @@ function PackingChecklist() {
           marginBottom: "40px",
         }}
       >
-
         <div>
           <h1
             style={{
-              fontSize: "48px",
-              fontWeight: "bold",
+              color: "#2B2118",
+              fontSize: "56px",
+              marginBottom: "10px",
             }}
           >
             Packing Checklist
@@ -47,257 +31,215 @@ function PackingChecklist() {
 
           <p
             style={{
-              color: "#94A3B8",
+              color: "#8B735F",
+              fontSize: "18px",
             }}
           >
-            Stay organized for your Europe Adventure Trip.
+            Stay organized for your luxury travel experience.
           </p>
         </div>
 
         <button
           style={{
-            background: "#00B4D8",
-            border: "none",
-            padding: "14px 24px",
-            borderRadius: "12px",
+            background: "#7C5C3B",
             color: "white",
-            fontWeight: "bold",
+            border: "none",
+            padding: "16px 28px",
+            borderRadius: "18px",
             cursor: "pointer",
+            fontSize: "16px",
+            fontWeight: "600",
           }}
         >
           Add Item
         </button>
-
       </div>
-
-      {/* ANALYTICS */}
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-          gap: "20px",
-          marginBottom: "40px",
+          gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+          gap: "24px",
+          marginBottom: "30px",
         }}
       >
-
-        <div style={cardStyle}>
-          <p style={labelStyle}>Total Items</p>
-          <h2>{checklistData.length}</h2>
+        <div style={summaryCard}>
+          <h3 style={summaryTitle}>Total Items</h3>
+          <h1 style={summaryNumber}>12</h1>
         </div>
 
-        <div style={cardStyle}>
-          <p style={labelStyle}>Packed</p>
-          <h2 style={{ color: "#06D6A0" }}>
-            {packedItems}
-          </h2>
+        <div style={summaryCard}>
+          <h3 style={summaryTitle}>Packed</h3>
+          <h1 style={{ ...summaryNumber, color: "#6B8E62" }}>6</h1>
         </div>
 
-        <div style={cardStyle}>
-          <p style={labelStyle}>Remaining</p>
-          <h2 style={{ color: "#FFB703" }}>
-            {remainingItems}
-          </h2>
+        <div style={summaryCard}>
+          <h3 style={summaryTitle}>Remaining</h3>
+          <h1 style={{ ...summaryNumber, color: "#C58B39" }}>6</h1>
         </div>
 
-        <div style={cardStyle}>
-          <p style={labelStyle}>Readiness</p>
-          <h2>{progress}%</h2>
+        <div style={summaryCard}>
+          <h3 style={summaryTitle}>Readiness</h3>
+          <h1 style={summaryNumber}>50%</h1>
         </div>
-
       </div>
-
-      {/* PROGRESS */}
 
       <div
         style={{
-          ...cardStyle,
+          background: "#F5EEE6",
+          padding: "24px",
+          borderRadius: "24px",
           marginBottom: "40px",
+          border: "1px solid #E7DDD1",
         }}
       >
-
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginBottom: "12px",
+            marginBottom: "14px",
           }}
         >
-          <p>Packing Progress</p>
-          <p>{progress}%</p>
+          <h2
+            style={{
+              color: "#2B2118",
+            }}
+          >
+            Packing Progress
+          </h2>
+
+          <h2
+            style={{
+              color: "#7C5C3B",
+            }}
+          >
+            50%
+          </h2>
         </div>
 
         <div
           style={{
-            width: "100%",
-            height: "16px",
-            background: "#163247",
+            background: "#E7DDD1",
+            height: "14px",
             borderRadius: "20px",
           }}
         >
-
           <div
             style={{
-              width: `${progress}%`,
+              background: "#7C5C3B",
+              width: "50%",
               height: "100%",
-              background:
-                "linear-gradient(to right,#0077B6,#00B4D8)",
               borderRadius: "20px",
             }}
-          />
-
+          ></div>
         </div>
-
       </div>
-
-      {/* CATEGORY */}
-
-      <div
-        style={{
-          display: "flex",
-          gap: "12px",
-          marginBottom: "40px",
-          flexWrap: "wrap",
-        }}
-      >
-
-        {[
-          "All",
-          "Documents",
-          "Clothes",
-          "Electronics",
-          "Health",
-        ].map((category) => (
-
-          <button
-            key={category}
-            style={{
-              background: "#102235",
-              border: "1px solid #163247",
-              padding: "12px 18px",
-              borderRadius: "12px",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            {category}
-          </button>
-
-        ))}
-
-      </div>
-
-      {/* CHECKLIST */}
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit,minmax(280px,1fr))",
-          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+          gap: "28px",
         }}
       >
-
         {checklistData.map((item) => (
-
           <div
             key={item.id}
             style={{
-              ...cardStyle,
+              background: "#FFFFFF",
+              border: "1px solid #E7DDD1",
+              borderRadius: "28px",
+              padding: "28px",
               transition: "0.3s",
               cursor: "pointer",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.04)",
             }}
-
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.02)";
+              e.currentTarget.style.transform = "translateY(-6px)";
+              e.currentTarget.style.background = "#F8F4EE";
             }}
-
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.background = "#FFFFFF";
             }}
           >
-
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "center",
+                marginBottom: "20px",
               }}
             >
+              <h2
+                style={{
+                  color: "#2B2118",
+                  fontSize: "30px",
+                }}
+              >
+                {item.item}
+              </h2>
 
-              <h2>{item.item}</h2>
-
-              <input
-                type="checkbox"
-                checked={item.packed}
-                readOnly
-              />
-
+              <input type="checkbox" checked={item.packed} />
             </div>
 
             <p
               style={{
-                color: "#94A3B8",
-                marginTop: "10px",
+                color: "#8B735F",
+                marginBottom: "20px",
+                fontSize: "18px",
               }}
             >
               {item.category}
             </p>
 
-            <div
+            <span
               style={{
-                marginTop: "20px",
+                background:
+                  item.priority === "High"
+                    ? "#F3E3DC"
+                    : item.priority === "Medium"
+                    ? "#F7E7C6"
+                    : "#E5F0E1",
+
+                color:
+                  item.priority === "High"
+                    ? "#B85C5C"
+                    : item.priority === "Medium"
+                    ? "#C58B39"
+                    : "#6B8E62",
+
+                padding: "10px 18px",
+                borderRadius: "30px",
+                fontWeight: "600",
               }}
             >
-
-              <span
-                style={{
-                  padding: "8px 14px",
-                  borderRadius: "20px",
-                  fontSize: "14px",
-                  fontWeight: "bold",
-
-                  background:
-                    item.priority === "High"
-                      ? "#EF476F33"
-                      : item.priority === "Medium"
-                      ? "#FFB70333"
-                      : "#06D6A033",
-
-                  color:
-                    item.priority === "High"
-                      ? "#EF476F"
-                      : item.priority === "Medium"
-                      ? "#FFB703"
-                      : "#06D6A0",
-                }}
-              >
-                {item.priority} Priority
-              </span>
-
-            </div>
-
+              {item.priority} Priority
+            </span>
           </div>
-
         ))}
-
       </div>
-
     </div>
   );
 }
 
-const cardStyle = {
-  background: "#0B1E2D",
-  border: "1px solid #163247",
-  borderRadius: "20px",
-  padding: "24px",
-  boxShadow: "0 0 20px rgba(0,180,216,0.08)",
+const summaryCard = {
+  background: "#FFFFFF",
+  border: "1px solid #E7DDD1",
+  borderRadius: "24px",
+  padding: "30px",
+  textAlign: "center",
+  boxShadow: "0 8px 20px rgba(0,0,0,0.03)",
 };
 
-const labelStyle = {
-  color: "#94A3B8",
-  marginBottom: "10px",
+const summaryTitle = {
+  color: "#8B735F",
+  marginBottom: "14px",
+  fontSize: "20px",
+};
+
+const summaryNumber = {
+  color: "#2B2118",
+  fontSize: "42px",
 };
 
 export default PackingChecklist;
