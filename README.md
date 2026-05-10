@@ -15,6 +15,16 @@ The platform follows a modular architecture where each functional domain is enca
 - **Collaborative Hub**: Permission-based sharing system allowing for multi-user coordination through link generation and email invitation workflows.
 - **Resource Management**: Dynamic packing assistant and vision board modules for logistical and creative trip preparation.
 
+---
+
+## 🖼 Interface Gallery
+
+| Destination Discovery | Financial Dashboard | Journey Itinerary |
+| :--- | :--- | :--- |
+| ![Discovery Preview](./assets/screenshots/discovery.png) | ![Budget Analytics](./assets/screenshots/budget.png) | ![Itinerary View](./assets/screenshots/itinerary.png) |
+
+---
+
 ### 2. Design System (tokens.css)
 The application utilizes a CSS variable-driven design system that standardizes:
 - **Spacing Scale**: A mathematical grid system for consistent layout padding and margins.
